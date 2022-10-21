@@ -1,0 +1,519 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans";
+    }
+    
+    html,
+    body {
+        height: 100%;
+        background: rgb(225, 225, 225);
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    /* Página de login*/
+    
+    .box-login {
+        max-width: 600px;
+        width: 95%;
+        padding: 40px 2%;
+        background: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        box-shadow: 10px 10px 10px #aaa;
+    }
+    
+    .box-login input[type=text],
+    .box-login input[type=password] {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ccc;
+        padding-left: 8px;
+        margin-top: 8px;
+    }
+    
+    .box-login input[type=submit] {
+        width: 140px;
+        height: 30px;
+        cursor: pointer;
+        margin-top: 8px;
+        font-size: 14px;
+        background: #00897b;
+        color: white;
+        border: 0;
+    }
+    
+    .box-login h2 {
+        text-align: center;
+        font-size: 19px;
+        color: black;
+        padding-bottom: 10px;
+    }
+    /* Box error do painel */
+    
+    .erro-box {
+        width: 100%;
+        padding: 8px 2%;
+        text-align: center;
+        background: #f75353;
+        color: white;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    /* Fim da página de login*/
+    
+    .clear {
+        clear: both;
+    }
+    
+    .center {
+        padding: 0 2%;
+        margin: 0 auto;
+    }
+    
+    .menu-wraper {
+        width: 300px;
+    }
+    
+    div.menu {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+        padding: 10px 0;
+        background: #455a64;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        float: left;
+        text-decoration: none;
+    }
+    
+    .items-menu {
+        margin-top: 30px;
+    }
+    
+    .items-menu h2 {
+        text-align: left;
+        font-weight: 300;
+        font-size: 16px;
+        background: #2F3D42;
+        color: white;
+        padding: 8px;
+    }
+    
+    .items-menu a {
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+        border-bottom: 2px solid #2F3D42;
+        padding: 8px;
+    }
+    /*Box Metricas */
+    
+    .box-metricas {
+        font-weight: 300px;
+        color: white;
+    }
+    
+    .box-metricas-single {
+        background: rgb(1, 95, 14);
+        height: 30%;
+        width: 30%;
+        padding: 10px;
+        margin: 10px;
+        float: left;
+    }
+    
+    header {
+        position: relative;
+        left: 300px;
+        background: #78909c;
+        padding: 10px 0;
+        width: calc(100% - 300px);
+    }
+    
+    .logout_btn_home {
+        float: right;
+    }
+    
+    .logout_btn_home a {
+        color: white;
+        font-size: 20px;
+        padding: 0 20px;
+        position: relative;
+        padding-left: 5px;
+        ;
+        text-decoration: none;
+    }
+    
+    .logout_btn_home a>span {
+        font-size: 15px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .menu-btn {
+        float: left;
+        cursor: pointer;
+        color: white;
+        font-size: 23px;
+        ;
+    }
+    
+    div.box-usuario {
+        text-align: center;
+    }
+    
+    .avatar-usuario {
+        text-align: left;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid #2F3D42;
+        display: inline-block;
+    }
+    
+    .avatar-usuario i {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: #2F3D42;
+    }
+    
+    .imagem-usuario {
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        position: relative;
+        border-radius: 50%;
+        border: 3px solid #2F3D42;
+    }
+    
+    .imagem-usuario img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%x;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    .nome-usuario {
+        text-decoration: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .nome-usuario p {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    /* Conteudo principal painel*/
+    
+    .w100 {
+        width: 100%;
+    }
+    
+    .w50 {
+        width: 49%;
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .content {
+        width: calc(100% - 300px);
+        position: relative;
+        left: 300px;
+        padding: 10px;
+    }
+    
+    .box-content {
+        background: white;
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+    
+    .box-content h2 {
+        font-weight: 300;
+        font-size: 23px;
+    }
+    /*Tabelas*/
+    
+    .wraper-table {
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 900px;
+        margin: 20px 0;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    table tr:nth-of-type(1) {
+        background: #00897b;
+        color: white;
+    }
+    
+    table tr {
+        color: #555;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    table td {
+        padding: 8px;
+    }
+    
+    table a.btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 4px 6px;
+        color: white;
+        font-size: 13px;
+    }
+    
+    a.btn.edit {
+        background: #FBB03E;
+    }
+    
+    a.btn.delete {
+        background: #E05C4E;
+    }
+    /*Paginação*/
+    
+    .paginacao {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .paginacao a {
+        font-size: 14px;
+        margin: 0 8px;
+        display: inline-block;
+        padding: 3px 4px;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .paginacao a.page-selected {
+        background: rgb(220, 220, 220);
+    }
+    /*Tabela Responsiva */
+    
+    .table-responsive {
+        margin: 20px auto;
+        max-width: 1280px;
+    }
+    
+    .col {
+        float: left;
+        width: 50%;
+    }
+    
+    .table-responsive .row:nth-of-type(1) {
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        border-bottom: 1px solid #333;
+        padding: 8px;
+        background: #00897b;
+    }
+    
+    .table-responsive .row {
+        color: #555;
+        border-bottom: 1px solid #ccc;
+        padding: 8px 0;
+    }
+    
+    .box-content form {
+        margin: 30px 0;
+    }
+    
+    .box-content form label {
+        font-weight: 300;
+        font-size: 17px;
+        color: black;
+        display: block;
+    }
+    
+    .box-content .form-group {
+        margin: 15px 0;
+    }
+    
+    .box-content form input[type=text],
+    .box-content form input[type=password] {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 300;
+        color: black;
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 40px;
+        padding-left: 8px;
+    }
+    
+    .box-content form textarea {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 300;
+        color: black;
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 150px;
+        padding: 8px;
+        resize: vertical;
+    }
+    
+    .box-content form input[type=date] {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 300;
+        color: black;
+        border: 1px solid #ccc;
+        width: 10%;
+        height: 40px;
+        padding-left: 8px;
+    }
+    
+    .box-content form select {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 300;
+        color: black;
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 40px;
+        padding-left: 8px;
+    }
+    
+    .box-content form input[type=file] {
+        margin-top: 8px;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+    
+    .box-content form input[type=submit] {
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 16px;
+        background: #00bfa5;
+        color: white;
+        border: 0;
+    }
+    
+    @media screen and (max-width:1200) {
+        .box-metricas-single {
+            height: 100px;
+        }
+    }
+    
+    @media screen and (max-width:1024) {
+        .box-metricas-single {
+            width: 100%;
+            height: auto;
+        }
+    }
+    /*Box de alerta!*/
+    
+    .box-alert {
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+    }
+    
+    .sucesso {
+        background: #0a5a33;
+        color: white;
+    }
+    
+    .erro {
+        background: #F75353;
+        color: white;
+    }
+    /* Adaptando para o mobile e resolução de até 768px*/
+    
+    .menu-active {
+        background: #3a4b51;
+    }
+    
+    .menu-active::before {
+        content: '> ';
+        font-weight: bold;
+        color: #00bfa5;
+    }
+    
+    .form-group-login .form-group-login label {
+        font-size: 13px;
+        font-weight: 300;
+        padding-right: 6px;
+        color: black;
+    }
+    
+    form .form-group-login:nth-of-type(2)
+    /*pega a segunda a segunda div do elemento*/
+    
+    {
+        position: relative;
+        top: 10px;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .box-metricas-single {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        .menu {
+            display: none;
+        }
+        .content {
+            width: 100%;
+            left: 0;
+        }
+        header {
+            left: 0;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        .w50 {
+            width: 100%;
+        }
+        .box-metricas-single {
+            width: 100%;
+            padding-top: 40%;
+        }
+    }
+    /* Adaptando para o mobile e resolução de até 400px*/
+    
+    @media screen and (max-width: 400px) {
+        .menu-wraper {
+            width: 200px;
+        }
+    }

@@ -1,0 +1,428 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans";
+    }
+    /** Boot CSS **/
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    .img {
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    .center {
+        max-width: 1280px;
+        padding: 0 2px;
+        margin: 0 auto;
+    }
+    
+    .w33 {
+        width: 33.3%;
+        padding: 0 10px;
+    }
+    
+    .w50 {
+        padding: 0 2%;
+        width: 50%;
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    .input {
+        border: 0;
+    }
+    /** Site **/
+    
+    header {
+        background: #3D437A;
+        padding: 20px 0;
+    }
+    
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    header .logo {
+        font-size: 23px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .mobile {
+        display: none;
+    }
+    
+    nav.desktop ul {
+        position: relative;
+        list-style-type: none;
+    }
+    
+    nav.desktop li {
+        font-size: 15px;
+        padding: 0 30px;
+        font-weight: 300;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    
+    nav.desktop a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .banner-container {
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .banner-single {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.5);
+        z-index: 2;
+    }
+    
+    section.banner-container form {
+        width: 93%;
+        max-width: 500px;
+        z-index: 3;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: (-50%, -50%);
+    }
+    
+    section.banner-container form h2 {
+        font-weight: 400;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    section.banner-container form input[type=email] {
+        width: 100%;
+        margin-top: 10px;
+        height: 66px;
+        background: white;
+        font-size: 22px;
+        padding-left: 10px;
+    }
+    
+    section.banner-container form input[type=submit] {
+        width: 100%;
+        margin-top: 10px;
+        height: 66px;
+        color: white;
+        background: #212547;
+        font-size: 22px;
+        cursor: pointer;
+        border: 0;
+    }
+    
+    section.descricao-autor {
+        padding: 30px 0;
+    }
+    
+    section.descricao-autor p {
+        font-weight: 300;
+        text-align: justify;
+    }
+    
+    section.descricao-autor h2 {
+        font-size: 28px;
+        color: #444;
+        font-weight: 700;
+    }
+    
+    section.especialidades {
+        padding: 40px 0;
+        background: #E2E2E2;
+    }
+    
+    section.especialidades h2.title {
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        color: #999;
+    }
+    
+    .box-especialidade {
+        margin: 40px 0;
+        padding: 0 30px;
+    }
+    
+    .box-especialidade h3 {
+        font-size: 40px;
+        text-align: center;
+        color: #212547;
+    }
+    
+    .box-especialidade h4 {
+        color: #212547;
+        font-weight: 400;
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .box-especialidade p {
+        margin-top: 10px;
+        text-align: justify;
+    }
+    
+    section.extras {
+        padding: 30px 0;
+        background: #404580;
+    }
+    
+    section.extras .title {
+        color: white;
+        font-weight: 300;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .depoimento-single {
+        padding: 15px 0;
+        border-bottom: 1px solid #5056A0;
+    }
+    
+    .depoimento-descricao {
+        font-size: 15px;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    
+    .autor {
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .servicos-container,
+    .depoimentos-container {
+        padding: 0 50px;
+    }
+    
+    .servicos-container ul {
+        margin: 20px 0;
+    }
+    
+    .servicos-container li {
+        font-size: 15px;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    
+    footer {
+        background: #313462;
+        text-align: center;
+        padding: 30px 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+    }
+    
+    footer.fixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    /*
+    Corrigindo overflow no IE e Edge
+    */
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    section.erro-404 h2 {
+        font-weight: 400px;
+        color: #444;
+        text-align: center;
+        border-top: 2px solid #444;
+    }
+    
+    section.erro-404 p {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #444;
+    }
+    
+    section.erro-404 a {
+        color: #444;
+    }
+    
+    .wraper-404 {
+        max-width: 1280px;
+        width: 100%;
+        left: 50%;
+        padding: 0 2%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+    }
+    
+    #map {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .contato-container {
+        text-align: center;
+    }
+    
+    .contato-container input[type=text] {
+        width: 100%;
+        height: 40px;
+        margin: 8px 0;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        max-width: 500px;
+        color: #444;
+    }
+    
+    .contato-container input[type=submit] {
+        background-color: #3D437A;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+    
+    .contato-container textarea {
+        width: 100%;
+        height: 120px;
+        margin: 8px 0;
+        padding-left: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        max-width: 500px;
+        color: #444;
+    }
+    
+    .bullets {
+        z-index: 5;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .bullets span {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 10px;
+        background-color: #ccc;
+    }
+    
+    .bullets span.active-slider {
+        background: white;
+    }
+    /** Responsivo Media Query **/
+    
+    @media screen and (max-width:768px) {
+        img {
+            float: none !important;
+            display: block;
+            margin: 0 auto;
+        }
+        .w50 {
+            padding: 20px;
+            width: 100%;
+        }
+        .w33 {
+            width: 100%;
+            padding: 20px 0;
+        }
+        .box-especialidade {
+            padding: 40px 20px;
+            margin: 0;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        nav.desktop {
+            display: none;
+        }
+        nav.mobile {
+            display: block;
+        }
+        nav.mobile ul {
+            z-index: 3;
+            display: none;
+            left: 0;
+            top: 55px;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+        nav.mobile li {
+            width: 100%;
+            display: block;
+            background: white;
+            font-size: 17px;
+            padding: 8px 0;
+            font-weight: 300;
+            border-bottom: 1px solid #ccc;
+        }
+        nav.mobile a {
+            display: block;
+            text-decoration: none;
+            color: #444;
+        }
+        .botao-menu-mobile {
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+    }
