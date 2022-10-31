@@ -10,7 +10,7 @@ include('classes/'.$class.'.php');
 
 spl_autoload_register($autoload);
 
-define('INCLUDE_PATH' , 'http://localhost/projeto_01/'); //diretorio raiz do sistema
+define('INCLUDE_PATH' , 'http://localhost/portal/'); //diretorio raiz do sistema
 define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/'); //diretorio estatico para o painel
 
 //Conectar com o Banco de Dados
@@ -56,6 +56,12 @@ function verificaPermissaoMenu ($permissao){
                 include('painel/pages/permissao_negada.php');
                 die();
             }
+    }
+
+    function recoverPost($post){
+        if (isset($_POST[$post])){
+            echo $_POST[$post];
+        }
     }
 
 ?>
