@@ -15,6 +15,14 @@ $nomeEmpresa = "Projeto 01";
     <link href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/fontawesome.min.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/all.css">
+    <script src="https://cdn.tiny.cloud/1/zu83q6qc3k50lft09am6z5q6xe72cv203o5z9yj5a0pix9ju/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+  </script>
     <title>Document</title>
 
 </head>
@@ -94,6 +102,7 @@ $nomeEmpresa = "Projeto 01";
     <script src="<?php echo INCLUDE_PATH ?>js/jquery.js"> </script>
     <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/main.js"> </script>
     <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/jquery_mask.js"></script>
+    
 </body>
 
 </html>

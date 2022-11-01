@@ -64,7 +64,7 @@ $tabela = "tb_site.noticias";
         </div><!-- /div.formgroup -->
         <div class="form-group">
             <label for="">Conteúdo</label>
-            <textarea name="conteudo" id="" cols="30" rows="10" ><?php recoverPost('conteudo');?></textarea>
+            <textarea name="conteudo" class="tinymce" id="" cols="30" rows="10" ><?php recoverPost('conteudo');?></textarea>
         </div>
         <div class=" form-group">
             <label for="">Capa</label>
