@@ -1,6 +1,6 @@
 <?php include('config.php'); ?>
-<?php Site::updateUsuarioOnline();?>
-<?php Site::contador();?>
+<?php Site::updateUsuarioOnline(); ?>
+<?php Site::contador(); ?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -32,7 +32,8 @@
     }
 
     ?>
-  <?//php new Email ();?>
+    <? //php new Email ();
+    ?>
     <header>
         <div class="center">
             <div class="logo left"> <a href="/">Logomarca</a> </div>
@@ -41,6 +42,7 @@
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>Sobre">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>Servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>noticias">Notícias</a></li>
                     <li><a realtime="Contato" href="<?php echo INCLUDE_PATH; ?>Contato">Contato</a></li>
                     <li><a realtime="depoimentos-2" href="<?php echo INCLUDE_PATH; ?>Contato">Depoimentos-2</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>Painel">Painel</a></li>
@@ -54,6 +56,7 @@
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>Sobre">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>Servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>noticias">Notícias</a></li>
                     <li><a realtime="Contato" href="<?php echo INCLUDE_PATH; ?>Contato">Contato</a></li>
                     <li><a realtime="depoimentos-2" href="<?php echo INCLUDE_PATH; ?>Contato">Depoimentos-2</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>Painel">Painel</a></li>
@@ -70,12 +73,21 @@
             include('pages/' . $url . '.php');
         } else {
             if ($url != 'Sobre' && $url != 'Servicos') {
-                $pagina404 = true;
-                include('pages/404.php');
+                $urlPar = explode('/',$url)[0];
+                if($urlPar != 'noticias'){
+                    $pagina404 = true;
+                    include('pages/404.php');
+                }else{
+                    include('pages/noticias.php');
+                }
+                
+                
             } else {
+                
                 include('pages/home.php');
             }
         }
+      
         ?>
     </div> <!-- Container principal-->
     <footer <?php if (isset($pagina404) && $pagina404 == true)  echo 'class="fixed"'; ?>>
@@ -98,7 +110,8 @@
 
 
     <?php } ?>
-    
+
     <script src="<?php echo INCLUDE_PATH; ?>js/formularios.js"> </script>
 </body>
+
 </html>

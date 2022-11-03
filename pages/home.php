@@ -15,16 +15,14 @@
     </section> <!-- Banner Principal-->
     <section class="descricao-autor">
         <div class="center">
-            <div class="w50 left">
-                <h2>Marcos Almeida</h2>
+            <div class="w100 left">
+                <h2 class="text-center"><img src="<?php echo INCLUDE_PATH; ?>images/marcos.jpg" alt="">Marcos Almeida</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at perspiciatis aspernatur cumque
                     animi asperiores expedita in est tenetur eaque? Amet vero quia ab eos dolorum. Provident sequi minus beatae.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at perspiciatis aspernatur cumque
                     animi asperiores expedita in est tenetur eaque? Amet vero quia ab eos dolorum. Provident sequi minus beatae.</p>
-            </div><!-- w50-->
-            <div class="w50 left">
-                <img class="right" src="<?php echo INCLUDE_PATH; ?>images/marcos.jpg" alt="">
-            </div><!-- w50 Foto-->
+            </div><!-- text-center-->
+           
             <div class="clear"></div> <!-- div clear-->
         </div><!-- div center-->
     </section> <!-- Descrição Autor-->
