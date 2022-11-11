@@ -73,26 +73,24 @@
             include('pages/' . $url . '.php');
         } else {
             if ($url != 'Sobre' && $url != 'Servicos') {
-                $urlPar = explode('/',$url)[0];
-                if($urlPar != 'noticias'){
+                $urlPar = explode('/', $url)[0];
+                if ($urlPar != 'noticias') {
                     $pagina404 = true;
                     include('pages/404.php');
-                }else{
+                } else {
                     include('pages/noticias.php');
                 }
-                
-                
             } else {
-                
+
                 include('pages/home.php');
             }
         }
-      
+
         ?>
     </div> <!-- Container principal-->
     <footer <?php if (isset($pagina404) && $pagina404 == true)  echo 'class="fixed"'; ?>>
         <div class="center">
-            <p>Todos os direitos reservados</p>
+            <p style="color:white;">Todos os direitos reservados</p>
         </div>
     </footer>
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
@@ -104,6 +102,18 @@
     <?php if ($url == 'home' || $url == '') {
     ?>
         <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+    <?php } ?>
+    <?php 
+
+    if(is_array($url) && strstr($url[0], 'noticias') !== false) {
+    ?>
+        <script>
+           
+                $('select').change(function(){
+                    location.href=include_path+"noticias/"+$(this).val();
+                })
+            
+        </script>
     <?php } ?>
     <?php if ($url == 'Contato') {
     ?>

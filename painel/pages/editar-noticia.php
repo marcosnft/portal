@@ -37,7 +37,7 @@ if (isset($_GET['id'])) {
                         Painel::deleteFile($capa_atual);
                         $capa = Painel::uploadFile($capa);
                         $slug = Painel::generateSlug($titulo);
-                        $arr = ['categoria_id' => $categoria_id, 'titulo' => $titulo, 'capa' => $capa, 'slug' => $slug, 'conteudo' => $conteudo, 'id' => $id, 'nome_tabela' => $tabela];
+                        $arr = ['categoria_id' => $categoria_id, 'titulo' => $titulo, 'data'=>date('Y-m-d'), 'capa' => $capa, 'slug' => $slug, 'conteudo' => $conteudo, 'id' => $id, 'nome_tabela' => $tabela];
                         Painel::update($arr);
                         $noticia = Painel::select('tb_site.noticias', 'id=?', array($id));
                         Painel::alert('sucesso', 'A notícia foi editada junto com a capa!');

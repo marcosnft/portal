@@ -1,25 +1,32 @@
+<?php 
+$url = explode('/',$_GET['url']);
+$verifica_categoria = MySql::conectar()->prepare("SELECT * FROM `projeto_01`.`tb_site.categorias` WHERE slug = ?");
+$verifica_categoria->execute(array($url[1]));
+if($verifica_categoria->rowCount() == 0){
+Painel::redirect(INCLUDE_PATH.'noticias');
+}
+$categoria_info = $verifica_categoria->fetch();
+$post = MySql::conectar()->prepare("SELECT * FROM `projeto_01`.`tb_site.noticias` WHERE slug = ? AND categoria_id = ?");
+$post->execute(array($url[2],$categoria_info['id']));
+if($post->rowCount() == 0){
+    //Painel::redirect(INCLUDE_PATH.'noticias');
+}
+//NOTICIA EXISTE
+$post = $post->fetch();
+?>
 <section class="noticia-single">
+    
     <div class="center">
         <header>
-            <h1> <i class="fa fa-calendar"></i> Título da minha notícia</h1>
+            <h1> <i class="fa fa-calendar"></i> <?php echo $post['titulo']?></h1>
         </header>
         <article>
+            <img src="<?php echo INCLUDE_PATH_PAINEL.'uploads/'.$post['capa'];?>" alt="">
+        <p> <?php echo $post['conteudo']?>
 
-
-            <h3>Título em h3</h3>
-            <h2>Título em h3</h2>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas rerum rem dolore consequatur dolor eos commodi reprehenderit corporis illo,
-                eaque eveniet maxime ipsa perferendis aspernatur iure accusamus sapiente quas non!</p>
-
-
-            <ul>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-            </ul>
-
-            <img src="<?php echo INCLUDE_PATH ?>images/bg.jpg" />
+            
         </article>
+        <a href="<?php echo INCLUDE_PATH.'noticias';?>">Retonar página de notícias</a>
     </div> <!-- /.center -->
+   
 </section><!-- /.noticia-single -->

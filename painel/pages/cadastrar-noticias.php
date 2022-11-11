@@ -28,7 +28,7 @@ $tabela = "tb_site.noticias";
                     if($verifica->rowCount()==0){
                     $imagem = Painel::uploadFile($capa);
                     $slug = Painel::generateSlug($titulo);
-                    $arr = ['categoria_id'=>$categoria_id,'titulo'=>$titulo,'conteudo'=>$conteudo,'capa'=>$imagem,
+                    $arr = ['categoria_id'=>$categoria_id,'data'=>date('Y-m-d'),'titulo'=>$titulo,'conteudo'=>$conteudo,'capa'=>$imagem,
                     'slug'=>$slug,'order_id'=>0,'nome_tabela'=>'tb_site.noticias'];
                     if(Painel::insert($arr)){
                         Painel::redirect(INCLUDE_PATH_PAINEL.'gerenciar-noticias');
@@ -40,6 +40,9 @@ $tabela = "tb_site.noticias";
                 } else{
                     Painel::alert('erro',' Selecione uma imagem válida!');
                 }
+            }
+            if( isset($_GET['sucesso']) && !isset($_POST['acao'])){
+                Painel::alert('sucesso',' O Cadastro da noticia foi feito com sucesso!');
             }
             //Podemos cadastrar
            

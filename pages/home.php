@@ -5,7 +5,7 @@
 
         <div class="overlay"></div><!-- Div Overlay-->
         <div class="center">
-            <form action="">
+            <form class="ajax-form" method="post">
                 <h2>Qual o seu melhor email?</h2>
                 <input type="email" name="email" required>
                 <input type="submit" name="acao" value="Cadastrar">
